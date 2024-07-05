@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH-Tube</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="w-4/5 mx-auto">
+    <header class="mb-10">
+        <nav class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 min-h-max items-center mt-5">
+            <div onclick={mainPage()} class="flex justify-center md:justify-start">
+                <img src="image/Logo.png" alt="">
+            </div>
+
+            <div class="flex justify-center md:justify-end lg:justify-center py-7 md:py-0">
+                <button id="short_button" onclick={sortByView()} class="text-xl font-medium text-[#252525] p-3 px-5 text-center bg-gray-400 rounded-md hover:bg-gray-300 ">Sort by view</button>
+            </div>
+
+            <div class="flex justify-center md:justify-end lg:justify-end md:mt-10 lg:mt-0">
+                <button onclick={blogPage()} class="text-xl font-medium text-white p-3 px-5 text-center bg-[#FF1F3D] rounded-md ">Blog</button>
+            </div>
+        </nav>
+    </header>
+    <hr class="bg-slate-300 h-[3px]">
+
+    <main>
+        <section class="flex justify-center my-10">
+            <div id="category_container" class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- <button class="text-xl font-medium text-gray-500 p-3 px-5 text-center  bg-gray-300 rounded-md ">All</button>
+                <button class="text-xl font-medium text-gray-500 p-3 px-5 text-center  bg-gray-300 rounded-md">lover musics</button>
+                <button class="text-xl font-medium text-gray-500 p-3 px-5 text-center  bg-gray-300 rounded-md">Comedy</button>
+                <button class="text-xl font-medium text-gray-500 p-3 px-5 text-center  bg-gray-300 rounded-md">Drawing</button> -->
+            </div>
+        </section>
+
+        <section class="flex justify-center">
+            <div id="card_container"  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
+
+            </div>
+
+            <div id="error-items"  class="hidden">
+                <div class="flex flex-col items-center gap-7 justify-center">
+                    <img src="image/Icon.png" alt="No itmes logo"  class="max-w-sm mt-10">
+                    <h2 class="text-2xl font-bold text-center">Oops!! Sorry, There is no <br> Content here</h2>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
